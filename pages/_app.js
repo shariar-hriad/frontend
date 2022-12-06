@@ -1,12 +1,19 @@
-import '../styles/globals.css';
-import Layout from '../components/Layout';
+import '../styles/globals.css'
+import Layout from '../components/Layout'
+import { Provider } from 'react-redux'
+import { store } from '../app/store'
+import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }) {
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
-    );
+        <Provider store={store}>
+            <ThemeProvider enableSystem={true} attribute='class'>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </ThemeProvider>
+        </Provider>
+    )
 }
 
-export default MyApp;
+export default MyApp

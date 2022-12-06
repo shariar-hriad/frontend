@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    mode: 'jit',
+    darkMode: 'class',
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     theme: {
         fontFamily: {
@@ -12,7 +14,7 @@ module.exports = {
             },
             backgroundImage: {
                 'linear-text': 'repeating-radial-gradient(circle farthest-corner at center center, #121FCF 0%, #CF1512 100%)',
-                'bg-linear': 'linear-gradient( -45deg, #bd34fe 50%, #47caff 50% )',
+                'backdrop-filter': 'linear-gradient( -45deg, #ec4899 50%, #8b5cf6 50% )',
             },
             backgroundColor: {
                 base: '#0f172a',
@@ -24,4 +26,4 @@ module.exports = {
         },
     },
     plugins: [],
-};
+}

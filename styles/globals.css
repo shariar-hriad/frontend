@@ -6,6 +6,6 @@
 
 @layer base {
     body {
-        @apply font-tw dark:bg-slate-900 dark:text-slate-400;
+        @apply font-tw dark:bg-[#141414] dark:text-slate-400;
     }
 }
